@@ -1,6 +1,6 @@
 <?php
 
-namespace Selective\XmlDSig;
+namespace Ostanin\XmlDSig;
 
 use DOMNode;
 use DOMXPath;

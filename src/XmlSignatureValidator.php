@@ -1,11 +1,11 @@
 <?php
 
-namespace Selective\XmlDSig;
+namespace Ostanin\XmlDSig;
 
 use DOMDocument;
 use DOMElement;
 use DOMXPath;
-use Selective\XmlDSig\Exception\XmlSignatureValidatorException;
+use Ostanin\XmlDSig\Exception\XmlSignatureValidatorException;
 
 /**
  * Verify the Digital Signatures of XML Documents.

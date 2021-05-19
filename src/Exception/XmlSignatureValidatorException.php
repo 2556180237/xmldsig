@@ -1,6 +1,6 @@
 <?php
 
-namespace Selective\XmlDSig\Exception;
+namespace Ostanin\XmlDSig\Exception;
 
 use RuntimeException;
 

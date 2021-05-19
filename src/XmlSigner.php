@@ -1,10 +1,10 @@
 <?php
 
-namespace Selective\XmlDSig;
+namespace Ostanin\XmlDSig;
 
 use DOMDocument;
 use DOMXPath;
-use Selective\XmlDSig\Exception\XmlSignerException;
+use Ostanin\XmlDSig\Exception\XmlSignerException;
 use UnexpectedValueException;
 
 /**
