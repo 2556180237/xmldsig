@@ -1,0 +1,55 @@
+{
+    "name": "ostanin/xmldsig",
+    "type": "library",
+    "description": "Sign XML Documents with Digital Signatures for Alfa Link",
+    "keywords": [
+        "xmldsig",
+        "xml",
+        "signatures",
+        "verify"
+    ],
+    "homepage": "https://github.com/2556180237/xmldsig",
+    "license": "MIT",
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "ext-openssl": "*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "overtrue/phplint": "^2.3",
+        "phpstan/phpstan": "0.*",
+        "phpunit/phpunit": "^8 || ^9",
+        "squizlabs/php_codesniffer": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ostanin\\XmlDSig\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ostanin\\XmlDSig\\Test\\": "tests/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@lint",
+            "@cs:check",
+            "@sniffer:check",
+            "@phpstan",
+            "@test:coverage"
+        ],
+        "cs:check": "php-cs-fixer fix --dry-run --format=txt --verbose --diff --diff-format=udiff --config=.cs.php",
+        "cs:fix": "php-cs-fixer fix --config=.cs.php",
+        "lint": "phplint ./ --exclude=vendor --no-interaction --no-cache",
+        "phpstan": "phpstan analyse -c phpstan.neon --no-progress --ansi",
+        "sniffer:check": "phpcs --standard=phpcs.xml",
+        "sniffer:fix": "phpcbf --standard=phpcs.xml",
+        "test": "phpunit --configuration phpunit.xml --do-not-cache-result --colors=always",
+        "test:coverage": "phpunit --configuration phpunit.xml --do-not-cache-result --colors=always --coverage-clover build/logs/clover.xml --coverage-html build/coverage"
+    },
+    "config": {
+        "sort-packages": true,
+        "process-timeout": 0
+    }
+}
